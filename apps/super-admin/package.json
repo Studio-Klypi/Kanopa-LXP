@@ -1,0 +1,21 @@
+{
+  "name": "@kanopa-apps/super-admin",
+  "version": "0.0.1",
+  "author": "Loic Maes",
+  "description": "Super admin app for Kanopa system",
+  "license": "CC-BY-NC-ND-4.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --port 3006",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^4.6.4",
+    "vue": "^3.5.45",
+    "vue-router": "^5.4.0"
+  }
+}

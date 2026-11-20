@@ -1,0 +1,24 @@
+{
+  "name": "@kanopa/design",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "Loic Maes",
+  "description": "Shared components library for Kanopa system",
+  "main": "./nuxt.config.ts",
+  "scripts": {
+    "dev:start": "nuxi dev",
+    "dev:prepare": "nuxt prepare",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "lint": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.17.0",
+    "@types/node": "^24.19.1",
+    "eslint": "^10.12.0",
+    "nuxt": "^4.6.4",
+    "typescript": "^6.0.3",
+    "vue": "^3.5.43"
+  }
+}
