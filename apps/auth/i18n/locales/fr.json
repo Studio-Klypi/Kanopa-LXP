@@ -1,0 +1,61 @@
+{
+  "boosted": "Propulsé par Kanopa",
+  "fields": {
+    "first-name": {
+      "label": "Prénom",
+      "placeholder": "John"
+    },
+    "last-name": {
+      "label": "Nom",
+      "placeholder": "DOE"
+    },
+    "email": {
+      "label": "Adresse e-mail",
+      "placeholder": "john.doe{'@'}example.xyz"
+    },
+    "password": {
+      "label": "Mot de passe",
+      "placeholder": "· · · · · · · · · · · · · ·",
+      "forgot": "Mot de passe oublié ?",
+      "description": "12 caractères minimum"
+    },
+    "keep-session": "Rester connecter",
+    "accept-terms": [
+      "J'accepte {terms} et {privacy}",
+      "les conditions d'utilisation",
+      "la politique de confidentialité"
+    ],
+    "invitation-code": {
+      "label": "Code d'invitation",
+      "placeholder": "HZN-B7K2"
+    }
+  },
+
+  "toasts": {},
+
+  "login": {
+    "title": "Content de vous revoir.",
+    "description": "Retrouvez vos cohortes, vos séances et vos badges.",
+    "subtitle": "Se connecter",
+    "precision": "à l'espace de formation {name}",
+    "action": "Me connecter",
+    "other-way": "Recevoir un lien de connexion",
+    "register": ["Pas encore de compte ? {link}", "Créer un compte"]
+  },
+  "register": {
+    "title": "Apprenez à votre rythme, avancez ensemble.",
+    "description": "Un seul compte Kanopa pour toutes vos formations, dans toutes les organisations qui vous invitent.",
+    "subtitle": "Créer un compte",
+    "precision": ["Vous avez déjà un compte ? {link}", "Se connecter"],
+    "action": "Créer mon compte",
+    "mail-sent": "Un e-mail de confirmation vous sera envoyé."
+  },
+  "forgot-password": {
+    "title": "Pas de panique.",
+    "description": "Nous vous envoyons un lien pour choisir un nouveau mot de passe.",
+    "subtitle": "Mot de passe oublié",
+    "precision": "Saisissez l'e-mail de votre compte Kanopa.",
+    "action": "Envoyer le lien",
+    "back-to-login": "Retour à la connexion"
+  }
+}
