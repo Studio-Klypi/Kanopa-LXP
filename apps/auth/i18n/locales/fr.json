@@ -57,5 +57,100 @@
     "precision": "Saisissez l'e-mail de votre compte Kanopa.",
     "action": "Envoyer le lien",
     "back-to-login": "Retour à la connexion"
+  },
+  "reset-password": {
+    "title": "Un nouveau départ.",
+    "description": "Choisissez un mot de passe que vous n’utilisez nulle part ailleurs.",
+    "subtitle": "Nouveau mot de passe",
+    "precision": "Pour le compte {email}",
+    "fields": {
+      "new-password": "Nouveau mot de passe",
+      "confirm-password": "Confirmer le mot de passe",
+      "logout": "Déconnecter tous mes autres appareils"
+    },
+    "action": "Enregistrer le mot de passe"
+  },
+
+  "organization": {
+    "new": {
+      "steps": [
+        "Organisation",
+        "Apparence",
+        "Informations légales",
+        "Abonnement"
+      ],
+      "title": {
+        "organization": "Votre organisation",
+        "appearance": "Votre identité visuelle",
+        "terms": "Informations légales",
+        "subscription": "Choisir un abonnement"
+      },
+      "description": {
+        "organization": "Vous en serez l'administrateur. Vous pourrez inviter votre équipe ensuite.",
+        "appearance": "Vos apprenants verront vos couleurs et votre logo, pas ceux de Kanopa.",
+        "terms": "Nécessaires pour vendre, émettre des factures et des certificats. Vous pouvez les compléter plus tard.",
+        "subscription": "Paiement par Stripe. Résiliable à tout moment."
+      },
+      "fields": {
+        "type": {
+          "label": "Vous êtes",
+          "options": {
+            "of": {
+              "title": "Organisme de formation",
+              "description": "Formations certifiantes ou non, Qualiopi"
+            },
+            "company": {
+              "title": "Entreprise",
+              "description": "Formation interne de vos équipes"
+            },
+            "freelance": {
+              "title": "Individuel",
+              "description": "Formateur ou coach en solo"
+            }
+          }
+        },
+        "name": {
+          "label": "Nom de l'organisation",
+          "placeholder": "Atelier Horizon"
+        },
+        "alias": {
+          "label": "Adresse de votre espace",
+          "placeholder": "atelier-horizon"
+        },
+        "logo": {
+          "label": "Importer un logo",
+          "precision": "PNG ou SVG, fond transparent"
+        },
+        "business-name": {
+          "label": "Raison sociale",
+          "placeholder": "Atelier Horizon",
+          "tooltip": "Pour un indépendant, la raison sociale est :\n\"NOM Prénom\"."
+        },
+        "siret": {
+          "label": "SIRET",
+          "placeholder": "123 456 789 00012"
+        },
+        "activity-number": {
+          "label": "N° de déclaration d'activité",
+          "placeholder": "12 34 56789 01"
+        },
+        "country": {
+          "label": "Pays",
+          "placeholder": "Sélectionnez un pays"
+        },
+        "qualiopi-certified": {
+          "label": "Mon organisme est certifié Qualiopi"
+        },
+        "plan": {
+          "reduction": "2 mois offerts (-16%)",
+          "description": "Les prix sont affichés Hors Taxes (HT)."
+        }
+      },
+      "action": "Créer et payer",
+      "free-trial": {
+        "title": "7 jours d'essai gratuit",
+        "description": "Sélectionnez votre plan, entrez vos informations de prélèvement et profiter de 7 jours d'essai gratuit. Pas de prélèvement aujourd'hui."
+      }
+    }
   }
 }
