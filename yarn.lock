@@ -2090,10 +2090,10 @@
   resolved "https://registry.yarnpkg.com/@keyv/serialize/-/serialize-1.1.1.tgz#0c01dd3a3483882af7cf3878d4e71d505c81fc4a"
   integrity sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==
 
-"@lucide/vue@^1.77.0":
-  version "1.77.0"
-  resolved "https://registry.yarnpkg.com/@lucide/vue/-/vue-1.77.0.tgz#7d95a0d93fe6e81e5503f1710a0c0840cb52bef6"
-  integrity sha512-B+okr/d8qC2imLzNPJ5tW8Nf7uKC19DgiOafxU0bOMfLnkd5Tkss4GW640+s5FierTJjgl99LpuO40u+yni0qQ==
+"@lucide/vue@^1.79.0":
+  version "1.79.0"
+  resolved "https://registry.yarnpkg.com/@lucide/vue/-/vue-1.79.0.tgz#2f9271777f2eb541d3f0d2754138a94ee6b90390"
+  integrity sha512-Qe9DrDeNmIPbClkaOzUC9gW0czx1J3YFmk8ua7CDEByY/JZ7CB4v1s9Ps6lLbuxOSQVLnC8LBei+lS9qI5X0iw==
 
 "@lukeed/csprng@^1.0.0":
   version "1.1.0"
@@ -3880,6 +3880,11 @@
   resolved "https://registry.yarnpkg.com/@types/web-bluetooth/-/web-bluetooth-0.0.21.tgz#525433c784aed9b457aaa0ee3d92aeb71f346b63"
   integrity sha512-oIQLCGWtcFZy2JW77j9k8nHzAOpqMHLQejDA48XXMWH6tjCQHz5RCFz1bzsmROyL6PUm+LLnUiI4BCn221inxA==
 
+"@types/web-bluetooth@^0.0.22":
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/@types/web-bluetooth/-/web-bluetooth-0.0.22.tgz#d587ebfe9e4b28ff2965e5177beaf5a293ac838a"
+  integrity sha512-4O7kU0Ut0irZvFyk3EvgDrzFYBQI80Puhkb65I7eV6WTZX4iOo5zoDrEfjDBRB7x5Stz31csoHO4hAjSiRTALw==
+
 "@types/yargs-parser@*":
   version "21.0.3"
   resolved "https://registry.yarnpkg.com/@types/yargs-parser/-/yargs-parser-21.0.3.tgz#815e30b786d2e8f0dcd85fd5bcf5e1a04d008f15"
@@ -4436,34 +4441,34 @@
     "@vueuse/metadata" "14.4.0"
     "@vueuse/shared" "14.4.0"
 
-"@vueuse/core@^15.0.0":
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-15.0.0.tgz#d4ca881cbee5ba653bda1a388ce441e8eed4e61d"
-  integrity sha512-Zv67h5mrk7YHDJsRObx+DXaCBz6RKBUpxqLesJ+3xZNPG6yuQs7ja7kg3veFrrouYLWAqydQ7CwGEbLVxB43Ng==
+"@vueuse/core@^15.1.0":
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-15.1.0.tgz#e33a17fc754844acbd6469328a3c07a00e91917e"
+  integrity sha512-OuZ5ecLw/sikX0HFjlJM/p/PkfL0567Ntfov9G0jYlw92QqZpPVikZOoB1Mpe4unZ+7E/QQ+uFpEgAjj2FYRbw==
   dependencies:
-    "@types/web-bluetooth" "^0.0.21"
-    "@vueuse/metadata" "15.0.0"
-    "@vueuse/shared" "15.0.0"
+    "@types/web-bluetooth" "^0.0.22"
+    "@vueuse/metadata" "15.1.0"
+    "@vueuse/shared" "15.1.0"
 
 "@vueuse/metadata@14.4.0":
   version "14.4.0"
   resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-14.4.0.tgz#a2508499b803bac14775a9c9b852b8738fc16f98"
   integrity sha512-swx/255R6JyHZFJhx845iz5CRWDZdCfvkZOpACWc5+c5WHcG24mv8gUT1WIdFQaHt6dq79rvILd9QnCWiyVm9g==
 
-"@vueuse/metadata@15.0.0":
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-15.0.0.tgz#c143e77d6e5b8f59ec345e1a524824381d33bd7b"
-  integrity sha512-sfWE5LADAKJ0KnjtGliMdSN8Ij/L7uP6rXIZlgPloAI4zvvefbw6H5Lt7KJA6RqQOYgVqWF5Guj50HHMIzygBg==
+"@vueuse/metadata@15.1.0":
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-15.1.0.tgz#72f0464a632d98564565dc958697d509b1ccbaa6"
+  integrity sha512-yHKFelRTdQdp7vdjXXEw68Wh9v8OgyxWm1v1aHbGM6Z4qbqHhB6QgB8MTNB76pZYh22wPeALCdr8qjShlxPBHA==
 
 "@vueuse/shared@14.4.0", "@vueuse/shared@^14.1.0":
   version "14.4.0"
   resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-14.4.0.tgz#4e89813c7859d153d48c03d74bff78739f96723b"
   integrity sha512-JRgY90Sz8DDtPMsaDflvPMp9xYk69JZAmbuDvAquUVXKr2gEjqtzGNTTthLfckH0BzBqvnu31gb4a8TGLRe79g==
 
-"@vueuse/shared@15.0.0":
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-15.0.0.tgz#9e9332e1345c08601f67f1657e0e82597b42cdef"
-  integrity sha512-vbNXhGrbV53xPOMSyOzMHQRvhMgZf7oNDw2RChUetVxwTIEkInQ1joZ9JbT0G3z2n2AJNjvmCWeM9ySYrnvogA==
+"@vueuse/shared@15.1.0":
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-15.1.0.tgz#477e51994fcad14a2b35d82c68a380af5161ebf9"
+  integrity sha512-JAbQLO+vOULt8MPR4oRbvstBuztTTMIX4LOfCGeBvp9JSgj5OppZDing3gKDrmlyUQvYYFSPIX4dxkfJgdsxWQ==
 
 "@webassemblyjs/ast@1.14.1", "@webassemblyjs/ast@^1.14.1":
   version "1.14.1"

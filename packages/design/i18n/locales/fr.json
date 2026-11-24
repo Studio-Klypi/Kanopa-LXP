@@ -1,7 +1,33 @@
 {
   "common": {
+    "buttons": {
+      "close": "Fermer",
+      "leave": "Quitter",
+      "cancel": "Annuler",
+
+      "new": "Nouveau | Nouvelle",
+      "create": "Créer",
+      "add": "Ajouter",
+
+      "continue": "Continuer",
+      "back": "Retour",
+      "next": "Suivant",
+      "previous": "Précédent"
+    },
     "labels": {
-      "or": "Ou"
+      "or": "Ou",
+      "popular": "Populaire",
+      "logged-as": "Connecté en tant que {name}",
+      "billing-period": {
+        "label": {
+          "yearly": "Annuel | Annuelle",
+          "monthly": "Mensuel | Mensuelle"
+        },
+        "unit": {
+          "year": "an | ans",
+          "month": "mois"
+        }
+      }
     }
   }
 }
