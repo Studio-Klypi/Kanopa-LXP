@@ -5,6 +5,13 @@ import { toTypedSchema } from '@vee-validate/zod';
 import { loginSchema } from '~/types/forms/login.form.ts';
 
 const { locale, setLocale, locales } = useI18n();
+async function changeLocale(val: 'fr') {
+  await setLocale(val);
+}
+
+definePageMeta({
+  layout: 'empty',
+});
 
 const company = useSubdomain();
 const companyName = computed(
@@ -14,10 +21,6 @@ const initials = computed(() => {
   const parts = company.value?.split('-');
   return parts ? `${parts[0]![0]}${parts[1]![0]}` : 'KA';
 });
-
-async function changeLocale(val: 'fr') {
-  await setLocale(val);
-}
 
 const store = useAuth();
 const { loading } = storeToRefs(store);

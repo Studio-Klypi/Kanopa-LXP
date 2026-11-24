@@ -4,7 +4,14 @@ import { useForm } from 'vee-validate';
 import { toTypedSchema } from '@vee-validate/zod';
 import { registerSchema } from '~/types/forms/register.form.ts';
 
-const { locale, setLocale, locales } = useI18n();
+const { locale, locales, setLocale } = useI18n();
+async function changeLocale(value: 'fr') {
+  await setLocale(value);
+}
+
+definePageMeta({
+  layout: 'empty',
+});
 
 const company = useSubdomain();
 const companyName = computed(
@@ -14,10 +21,6 @@ const initials = computed(() => {
   const parts = company.value?.split('-');
   return parts ? `${parts[0]![0]}${parts[1]![0]}` : 'KA';
 });
-
-async function changeLocale(val: 'fr') {
-  await setLocale(val);
-}
 
 const store = useAuth();
 const { loading } = storeToRefs(store);
@@ -202,9 +205,7 @@ const submit = form.handleSubmit(async (values) => {
           >
             <UiFormItem>
               <UiFormLabel>
-                {{
-                  $t("fields.invitation-code.label")
-                }}
+                {{ $t("fields.invitation-code.label") }}
               </UiFormLabel>
               <UiFormControl>
                 <UiInput

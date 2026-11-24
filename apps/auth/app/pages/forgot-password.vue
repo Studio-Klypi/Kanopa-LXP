@@ -9,6 +9,10 @@ async function changeLocale(value: 'fr') {
   await setLocale(value);
 }
 
+definePageMeta({
+  layout: 'empty',
+});
+
 const company = useSubdomain();
 const companyName = computed(
   () => company.value?.split('-').join(' ') ?? 'Kanopa',
