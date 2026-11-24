@@ -2,6 +2,7 @@ import { type AuthState, initialState } from '~/types/states/auth.state.ts';
 import type { RegisterPayload } from '~/types/forms/register.form.ts';
 import type { LoginPayload } from '~/types/forms/login.form.ts';
 import type { ForgotPasswordPayload } from '~/types/forms/forgot-password.form.ts';
+import type { ResetPasswordPayload } from '~/types/forms/reset-password.form.ts';
 
 export const useAuth = defineStore('auth', {
   state: (): AuthState => ({ ...initialState }),
@@ -37,6 +38,14 @@ export const useAuth = defineStore('auth', {
       await new Promise(resolve => setTimeout(resolve, 1500));
       console.log('[ForgotPassword] Payload received', payload);
       this.loading.forgotPassword = false;
+    },
+    async resetPassword(payload: ResetPasswordPayload) {
+      if (this.loading.resetPassword) return;
+      this.loading.resetPassword = true;
+
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      console.log('[ResetPassword] Payload received', payload);
+      this.loading.resetPassword = false;
     },
   },
 });

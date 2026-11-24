@@ -4,6 +4,7 @@ export interface AuthState {
     register: boolean;
     login: boolean;
     forgotPassword: boolean;
+    resetPassword: boolean;
   };
 }
 export const initialState: AuthState = {
@@ -12,5 +13,6 @@ export const initialState: AuthState = {
     register: false,
     login: false,
     forgotPassword: false,
+    resetPassword: false,
   },
 };
