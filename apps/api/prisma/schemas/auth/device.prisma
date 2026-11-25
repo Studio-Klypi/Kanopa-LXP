@@ -1,0 +1,34 @@
+enum DevicePlatform {
+  desktop
+  tablet
+  mobile
+}
+
+enum DeviceOs {
+  macOs
+  iOs
+  android
+  windows
+  linux
+  chromeOs
+  other
+}
+
+model Device {
+  id          String          @id @default(cuid())
+  userId      String
+  keyHash     String
+  agent       String
+  browser     String?
+  platform    DevicePlatform?
+  os          DeviceOs?
+  firstSeenAt DateTime        @default(now()) @db.Timestamptz(3)
+  lastSeenAt  DateTime        @default(now()) @db.Timestamptz(3)
+
+  relUser User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  linkedSessions Session[]
+
+  @@unique([userId, keyHash])
+  @@map("devices")
+}

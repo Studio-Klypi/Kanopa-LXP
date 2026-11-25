@@ -1,0 +1,26 @@
+enum AuthMethod {
+  password
+}
+
+model Session {
+  id         String     @id @default(cuid())
+  tokenHash  String     @unique
+  userId     String
+  deviceId   String
+  ip         String?
+  agent      String?
+  method     AuthMethod @default(password)
+  createdAt  DateTime   @default(now()) @db.Timestamptz(3)
+  expiresAt  DateTime   @db.Timestamptz(3)
+  lastSeenAt DateTime   @default(now()) @db.Timestamptz(3)
+  revokedAt  DateTime?  @db.Timestamptz(3)
+
+  relUser   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  relDevice Device @relation(fields: [deviceId], references: [id], onDelete: Cascade)
+
+  linkedLogs Log[]
+
+  @@index([userId, expiresAt])
+  @@index(expiresAt)
+  @@map("sessions")
+}

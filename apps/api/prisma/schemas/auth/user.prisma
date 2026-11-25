@@ -1,0 +1,69 @@
+enum Language {
+  fr
+  en
+  de
+  es
+  ja
+}
+
+enum Theme {
+  system
+  light
+  dark
+}
+
+enum NotificationChannel {
+  push
+  email
+}
+
+model User {
+  id              String    @id @default(cuid())
+  firstName       String
+  lastName        String
+  phone           String?
+  email           String    @unique @db.Citext
+  linkedin        String?
+  active          Boolean   @default(true)
+  emailVerifiedAt DateTime? @db.Timestamptz(3)
+  createdAt       DateTime  @default(now()) @db.Timestamptz(3)
+  updatedAt       DateTime  @updatedAt @db.Timestamptz(3)
+  deletedAt       DateTime? @db.Timestamptz(3)
+
+  linkedPassword           UserPassword?
+  linkedPreferences        UserPreference?
+  linkedSessions           Session[]
+  linkedDevices            Device[]
+  linkedVerificationTokens VerificationToken[]
+  linkedLogs               Log[]
+
+  @@map("users")
+}
+
+model UserPassword {
+  userId       String   @id
+  passwordHash String
+  createdAt    DateTime @default(now()) @db.Timestamptz(3)
+  updatedAt    DateTime @updatedAt @db.Timestamptz(3)
+
+  relUser User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_passwords")
+}
+
+model UserPreference {
+  userId               String                @id
+  lang                 Language              @default(fr)
+  theme                Theme                 @default(system)
+  timezone             String                @default("Europe/Paris")
+  notificationsEnabled Boolean               @default(true)
+  notificationChannels NotificationChannel[] @default([push, email])
+  showEmail            Boolean               @default(false)
+  showPhone            Boolean               @default(false)
+  showLinkedin         Boolean               @default(false)
+  updatedAt            DateTime              @updatedAt @db.Timestamptz(3)
+
+  relUser User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_preferences")
+}

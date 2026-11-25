@@ -1,0 +1,30 @@
+enum LogType {
+  loginSucceeded
+  loginFailed
+  logout
+  sessionRevoked
+  passwordChanged
+  passwordResetRequested
+  passwordResetCompleted
+  emailVerified
+  emailChanged
+  newDeviceDetected
+}
+
+model Log {
+  id        String   @id @default(cuid())
+  userId    String?
+  sessionId String?
+  type      LogType
+  ip        String?
+  agent     String?
+  meta      Json?
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+
+  relUser    User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  relSession Session? @relation(fields: [sessionId], references: [id], onDelete: SetNull)
+
+  @@index([userId, createdAt])
+  @@index([type, createdAt])
+  @@map("logs")
+}

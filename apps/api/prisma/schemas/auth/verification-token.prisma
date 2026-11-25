@@ -1,0 +1,24 @@
+enum VerificationPurpose {
+  passwordReset
+  emailVerification
+  emailChange
+}
+
+model VerificationToken {
+  id          String              @id @default(cuid())
+  userId      String
+  purpose     VerificationPurpose
+  tokenHash   String              @unique
+  newEmail    String?             @db.Citext
+  requestedIp String?
+  expiresAt   DateTime            @db.Timestamptz(3)
+  usedAt      DateTime?           @db.Timestamptz(3)
+  createdAt   DateTime            @default(now()) @db.Timestamptz(3)
+
+  relUser User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, purpose])
+  @@index([userId, expiresAt])
+  @@index(expiresAt)
+  @@map("verification_tokens")
+}
