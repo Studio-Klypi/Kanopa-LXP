@@ -1,0 +1,23 @@
+{
+  "name": "@kanopa/types",
+  "type": "module",
+  "version": "0.1.0",
+  "license": "CC-BY-NC-ND-4.0",
+  "description": "Kanopa shared types and utilities.",
+  "author": "Loic Maes",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "postinstall": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
