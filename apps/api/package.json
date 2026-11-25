@@ -23,8 +23,23 @@
     "@nestjs/common": "^11.0.1",
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
+    "@nestjs/config": "^12.0.1",
+    "@nestjs/swagger": "^12.0.2",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "@prisma/adapter-pg": "^7.10.0",
+    "prisma": "7.10.0",
+    "handlebars": "^4.7.10",
+    "nodemailer": "^10.3.1",
+    "pdf-lib": "^1.17.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "cookie-parser": "^1.4.7",
+    "archiver": "^7.0.1",
+    "argon2": "^0.45.1",
+    "@scalar/nestjs-api-reference": "^1.2.27",
+    "@pdf-lib/fontkit": "^1.1.1",
+    "express-basic-auth": "^1.2.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
@@ -36,6 +51,11 @@
     "@types/jest": "^30.0.0",
     "@types/node": "^24.0.0",
     "@types/supertest": "^7.0.0",
+    "@types/multer": "^2.3.0",
+    "@types/nodemailer": "^8.0.2",
+    "@prisma/client": "7.10.0",
+    "@types/archiver": "^6.0.4",
+    "@types/cookie-parser": "^1.4.10",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.2",
@@ -59,8 +79,23 @@
     ],
     "rootDir": "src",
     "testRegex": ".*\\.spec\\.ts$",
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1",
+      "^@nestjs/swagger$": "<rootDir>/../test/mocks/nestjs-swagger.mock.ts",
+      "^@nestjs/config$": "<rootDir>/../test/mocks/nestjs-config.mock.ts"
+    },
     "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
+      "^.+\\.(t|j)s$": [
+        "ts-jest",
+        {
+          "tsconfig": {
+            "module": "commonjs",
+            "moduleResolution": "nodenext",
+            "resolvePackageJsonExports": false,
+            "allowJs": true
+          }
+        }
+      ]
     },
     "collectCoverageFrom": [
       "**/*.(t|j)s"
